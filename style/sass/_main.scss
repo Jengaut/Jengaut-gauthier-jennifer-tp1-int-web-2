@@ -1,10 +1,10 @@
-/*
-On doit importer les variables et les placeholders pour pouvoir s'en servir.
-Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace variables.$abc à chaque fois.
-*/
 @use "variables" as v;
 @use "placeholders";
 @use 'mixin' as m;
+
+.galerie {
+
+}
 
 .section {
     margin: 2em 0;

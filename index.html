@@ -17,32 +17,40 @@
 			<h1><img class="logo" src="img/logo.png" alt="logo de Blade"></h1>
 			<nav>
 				<ul class="nav-list">
-					<li class="nav-list__list-item"><a class="nav-list__link" href="#">Images</a></li>
-					<li class="nav-list__list-item"><a class="nav-list__link nav-list__link--actuel-header" href="#">En savoir plus</a></li>
-					<li class="nav-list__list-item"><a class="nav-list__link" href="#">Statistiques</a></li>
-					<li class="nav-list__list-item"><a class="nav-list__link" href="#">Autre page</a></li>
+					<li class="nav-list__list-item"><a class="nav-list__link" href="#galerie">Images</a></li>
+					<li class="nav-list__list-item"><a class="nav-list__link nav-list__link--actuel-header" href="#savoir-plus">En savoir plus</a></li>
+					<li class="nav-list__list-item"><a class="nav-list__link" href="#statistique">Statistiques</a></li>
+					<li class="nav-list__list-item"><a class="nav-list__link" href="#autre">Autre page</a></li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 	<main>
 		<div class="container">
+			<div id="galerie">
 			<section class="section">
 				<img src="/img/left-arrow.png" alt="flèche arrière">
 				<img src="/img/blade.jpg" alt="Blade">
 				<img src="/img/right-arrow.png" alt="flèche arrière">
 			</section>
+		</div>
+		<div id="savoir-plus">
 			<section class="section">
 				<h2>Si tu veux en savoir plus</h2>
 				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam quaerat blanditiis fugiat
 					dignissimos cum illo doloribus, debitis tempora, quis quia mollitia vitae temporibus incidunt
 					pariatur facilis autem assumenda, officia ipsa deserunt. Eos cum, ea repudiandae quis expedita
 					dolorem aut fugiat atque ducimus?</p>
-				<form action="POST">
-					<label for=""></label>
-					<a class="section__btn" href="#">Soumettre</a>
+					<form action="confirmation.html" method="post">
+					<div class="marg-bot flex-col">
+						<label for="nom"></label>
+						<input type="text" name="nom" id="nom" class="champs-large">
+					</div>
+					<a class="section__btn" type='submit' href="/confirmation.html">Soumettre</a>
 				</form>
 			</section>
+		</div>
+		<div id="statistique">
 			<section class="section">
 				<img src="/img/statistique.png" alt="image de statistique">
 				<h2>Des statistique</h2>
@@ -53,20 +61,24 @@
 				<a class="section__btn" href="#">Voir plus</a>
 			</section>
 		</div>
+		</div>
 	</main>
 	<footer>
+		
 		<div class="container">
+			<div id="autre">
 			<div class="footer-content">
 				<div><img class="logo--small" src="img/logo.png" alt="logo de Blade"></div>
 				<nav>
 					<ul class="nav-list nav-list--small">
-						<li class="nav-list__list-item"><a class="nav-list__link" href="#">Images</a></li>
-						<li class="nav-list__list-item"><a class="nav-list__link nav-list__link--actuel-footer" href="#">En savoir plus</a></li>
-						<li class="nav-list__list-item"><a class="nav-list__link" href="#">Statistiques</a></li>
-						<li class="nav-list__list-item"><a class="nav-list__link" href="#">Autre page</a></li>
+						<li class="nav-list__list-item"><a class="nav-list__link" href="#galerie">Images</a></li>
+						<li class="nav-list__list-item"><a class="nav-list__link nav-list__link--actuel-footer" href="#savoir-plus">En savoir plus</a></li>
+						<li class="nav-list__list-item"><a class="nav-list__link" href="#statistique">Statistiques</a></li>
+						<li class="nav-list__list-item"><a class="nav-list__link" href="#autre">Autre page</a></li>
 					</ul>
 				</nav>
 			</div>
+		</div>
 			<div class="footer-content__message">
 				<p>Fait par: Jennnifer Gauthier</p>
 				<div>
