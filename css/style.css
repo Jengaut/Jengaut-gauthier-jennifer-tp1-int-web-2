@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/*
+Ce fichier contient les placeholders, qui sont des groupes de règles CSS qu'on
+peut appeler et réutiliser à l'intérieur d'autres classes à l'aide de la règle @extend.
+*/
+.header-content, .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section__btn, .section__btn:hover, .section__btn--accent, .section__btn--accent:hover, .nav-list__link {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 0.4em;
+}
+
+/*
+On doit importer les variables et les placeholders pour pouvoir s'en servir.
+L'étoile (*) permet de ne pas avoir à invoquer le namespace ou le pseudo pour appeler les variables.
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0eded;
+  color: #2b2828;
+  line-height: 1.4;
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #d4d1d1;
+}
+
+footer {
+  background-color: rgb(136, 24, 76);
+  margin-top: auto;
+  padding: 1em;
+}
+
+.header-content {
+  /*La règle @extend permet d'aller chercher les propriétés CSS dans le placeholder %flex-between. Voir le _partial _placeholders*/
+}
+
+.footer-content {
+  /*On réutilise le même placeholder pour éviter de répéter du code.*/
+}
+.footer-content__message {
+  text-align: center;
+  color: #da2c7d;
+}
+
+.logo {
+  width: 70%;
+}
+.logo--small {
+  width: 50%;
+}
+
+/*
+On doit importer les variables et les placeholders pour pouvoir s'en servir.
+Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace variables.$abc à chaque fois.
+*/
+.nav-list {
+  list-style: none;
+}
+.nav-list__list-item {
+  display: inline-block;
+  margin-left: 0.8em;
+}
+.nav-list__link {
+  /*La règle @extend permet d'aller chercher les propriétés CSS dans le placeholder %button. Voir le _partial _placeholders*/
+  text-transform: uppercase;
+  color: #da2c7d;
+}
+.nav-list__link--actuel-header {
+  border-bottom: 0.2em solid rgb(136, 24, 76);
+}
+.nav-list__link--actuel-footer {
+  border-bottom: 0.2em solid #f0eded;
+}
+.nav-list__link:hover {
+  background-color: #f0eded;
+}
+.nav-list--small {
+  font-size: 0.8em;
+}
+
+/*
+Ce mixin pourra être appelé afin de générer des boutons selon les différents paramètres
+On peut appeler un mixin avec la règle @include (voir les boutons dans le fichier _main.scss)
+Il faut le voir un peu comme un placeholder (@extend), mais les valeurs des propriétés CSS vont varier selon les valeurs passées en paramètres.
+*/
+/*
+On doit importer les variables et les placeholders pour pouvoir s'en servir.
+Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace variables.$abc à chaque fois.
+*/
+.section {
+  margin: 2em 0;
+}
+.section h2 {
+  text-transform: uppercase;
+}
+.section p a {
+  color: rgb(136, 24, 76);
+}
+.section__btn {
+  background-color: #f0eded;
+  color: #da2c7d;
+  border: solid 0.1em #da2c7d;
+  font-size: 1rem;
+}
+.section__btn:hover {
+  background-color: #c2b5b5;
+  color: #f0eded;
+  border: solid 0.1em #da2c7d;
+  font-size: 1rem;
+}
+.section__btn--accent {
+  background-color: #da2c7d;
+  color: #f0eded;
+  border: solid 0.1em #da2c7d;
+  font-size: 1.2rem;
+}
+.section__btn--accent:hover {
+  background-color: #88184c;
+  color: #da2c7d;
+  border: solid 0.1em #da2c7d;
+  font-size: 1.2rem;
+}
+
+/*
+On doit importer tous les partials nécessaires pour générer notre CSS.
+Pas besoin d'importer _placeholders et _variables, car ils sont déjà importés et utilisés dans les autres partials.
+*//*# sourceMappingURL=style.css.map */
